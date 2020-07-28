@@ -15,7 +15,7 @@
   ],
   "dependencies": {
     "@types/webpack": "4.41.8",
-    "lodash": "4.17.15"
+    "lodash": "4.17.19"
   },
   "peerDependencies": {
     "webpack": ">=4.0.0 < 6.0.0"
