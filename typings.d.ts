@@ -1,8 +1,8 @@
-import { Compiler } from 'webpack';
+import { Compiler, Plugin } from 'webpack';
 
 export = NginxPushWebpackPlugin;
 
-declare class NginxPushWebpackPlugin {
+declare class NginxPushWebpackPlugin extends Plugin {
   constructor(options?: NginxPushWebpackPlugin.Options);
 
   apply(compiler: Compiler): void;
