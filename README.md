@@ -19,7 +19,7 @@ $ yarn add nginx-push-webpack-plugin
 
 This is a [webpack](http://webpack.js.org/) plugin that simplifies creation of nginx conf to push your webpack bundle files through HTTP2.
 
-HTTP/2 has released for a few years, it dramatically improves performances a lot. One noticeable feature is HTTP push which is able to push static resources such as javascript, style sheet and image during first request to server. Typically, the first request for SPA is index.html. Nginx support HTTP/2 server push in version 1.13.9 with new directive `http2_push`
+HTTP/2 has released for a few years, it dramatically improves performances a lot. One noticeable feature is HTTP push which is able to push static resources such as javascript, style sheet and image during first request to server. Typically, the first request for SPA is index.html. Nginx support HTTP/2 server push in version 1.13.9 with new directive `http2_push` https://www.nginx.com/blog/nginx-1-13-9-http2-server-push/.
 
 However, the new directive prefers fixed file name such as `style.css` without hash. Hashing filenames in webpack is pretty important for [long term caching](https://github.com/webpack/docs/wiki/long-term-caching). To enable `http2_push` in SPA application, it seems that we need to manually update our nginx conf for each build. That's why we introduce this plugin to create `http2_push` directive for each webpack build. There is no need to update main nginx conf each time, we only need to `include nginx.push.conf`. `nginx.push.conf` will be automatically updated.
 
@@ -30,7 +30,7 @@ This plugin will automatically generated `http2_push` statement for each output 
 ### webpack.config.js
 
 ```js
-// GroupsProvider.ts
+// webpack.config.js
 const NginxPushWebpackPlugin = require('nginx-push-webpack-plugin')
 
 module.exports = {
@@ -77,6 +77,7 @@ server {
     # what file to server as index
     index index.html;
 
+    # include nginx push conf to enable HTTP/2 server push
     include nginx.push.conf;
 }
 ```
