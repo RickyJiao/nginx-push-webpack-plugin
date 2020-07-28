@@ -1,0 +1,33 @@
+{
+  "name": "nginx-push-webpack-plugin",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Simplifies creation of nginx conf to push your webpack bundle files through HTTP2",
+  "author": {
+    "name": "Ricky Jiao",
+    "email": "ricky.jiao86@gmail.com"
+  },
+  "main": "index.js",
+  "types": "typings.d.ts",
+  "files": [
+    "index.js",
+    "typings.d.ts"
+  ],
+  "dependencies": {
+    "@types/webpack": "4.41.8",
+    "lodash": "4.17.15"
+  },
+  "peerDependencies": {
+    "webpack": ">=4.0.0 < 6.0.0"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "nginx",
+    "http-push",
+    "nginx-push-webpack-plugin"
+  ],
+  "engines": {
+    "node": ">=8.0"
+  }
+}
