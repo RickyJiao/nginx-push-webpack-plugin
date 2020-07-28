@@ -1,6 +1,6 @@
 <div align="center">
   <h1>HTML Webpack Plugin</h1>
-  <p>Plugin that simplifies creation of nginx conf to push your webpack bundle files through HTTP2</p>
+  <p>Plugin that simplifies creation of nginx conf to push your webpack bundle files through HTTP/2</p>
 </div>
 
 ## Installation
@@ -17,7 +17,7 @@ Using yarn:
 $ yarn add nginx-push-webpack-plugin
 ```
 
-This is a [webpack](http://webpack.js.org/) plugin that simplifies creation of nginx conf to push your webpack bundle files through HTTP2.
+This is a [webpack](http://webpack.js.org/) plugin that simplifies creation of nginx conf to push your webpack bundle files through HTTP/2.
 
 HTTP/2 has released for a few years, it dramatically improves performances a lot. One noticeable feature is HTTP push which is able to push static resources such as javascript, style sheet and image during first request to server. Typically, the first request for SPA is index.html. Nginx support HTTP/2 server push in version 1.13.9 with new directive `http2_push` https://www.nginx.com/blog/nginx-1-13-9-http2-server-push/.
 
