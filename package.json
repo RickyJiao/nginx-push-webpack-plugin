@@ -1,6 +1,6 @@
 {
   "name": "nginx-push-webpack-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "description": "Simplifies creation of nginx conf to push your webpack bundle files through HTTP2",
   "author": {

@@ -27,5 +27,11 @@ declare namespace NginxPushWebpackPlugin {
      * @default 'index.html'
      */
     index: string;
+
+    /**
+     * Don't generate nginx `location` directive
+     * @default 'false'
+     */
+    omitNginxLocation: string;
   }
 }
