@@ -59,8 +59,7 @@ class NginxPushWebpackPlugin {
 # Please include this file in your nginx web server directive
 # \`\`\`
 #   include nginx.push.conf;
-# \`\`\`
-`];
+# \`\`\``];
 
     if (!omitNginxLocation) {
       content.push(`location = /${index} {`);
